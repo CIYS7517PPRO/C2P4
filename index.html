@@ -5,9 +5,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
 </head>
 <body>
-    Red <input type="range" min="1" max="100" step="1" value="10" onchange="updateSlider()" id = "red"><br>
-    Green <input type="range" min="1" max="100" step="1" value="10" onchange="updateSlider()" id = "green"><br>
-    Blue <input type="range" min="1" max="100" step="1" value="10" onchange="updateSlider()" id = "blue">
+    Red <input type="range" min="1" max="255" step="1" value="10" onchange="updateSlider()" id = "red"><br>
+    Green <input type="range" min="1" max="255" step="1" value="10" onchange="updateSlider()" id = "green"><br>
+    Blue <input type="range" min="1" max="255" step="1" value="10" onchange="updateSlider()" id = "blue">
     <script>
         docBody = document.getElementsByTagName("body")[0];
         redSlider = document.getElementById("red");
@@ -16,6 +16,11 @@
         
         var updateSlider = () => {
             docBody.style.backgroundColor = `rgb(${redSlider.value},${greenSlider.value},${blueSlider.value})`;
+            if {redSlider.value + blueSlider.value + greenSlider.Value < 255} {
+                docBody.style.color = "white";
+            } else {
+                docBody.style.color = "black";
+            }
         }
     </script>
 </body>
