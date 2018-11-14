@@ -16,7 +16,7 @@
         
         var updateSlider = () => {
             docBody.style.backgroundColor = `rgb(${redSlider.value},${greenSlider.value},${blueSlider.value})`;
-            if (redSlider.value + blueSlider.value + greenSlider.Value < 255) {
+            if ((redSlider.value + blueSlider.value + greenSlider.Value) < 255) {
                 docBody.style.color = "white";
             } else {
                 docBody.style.color = "black";
